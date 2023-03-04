@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f8ff;
+}
+
+.container {
+    width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.container > h2{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 340px;
+}
+
+.editor-panel {
+    border: 1px solid #d0d0d0;
+    padding: 15px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.editor-panel .title {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.editor-panel .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.editor-panel button {
+    height: 36px;
+    font-size: 14px;
+    color: #001c52;
+    margin-bottom: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.editor-panel button:hover {
+    background: #d0d0d0;
+    transition: 0.3s;
+}
+
+.filter button {
+    width: calc( 100% / 2 - 5px);
+}
+
+.filter button.active-button {
+    color: #d0d0d0;
+    background: #33415e;
+    border-color:  #33415e;
+}
+
+.rotate button {
+    width: calc( 100% / 4 - 5px);
+}
+
+.preview-image > img {
+    width: 300px;
+    height: 200px;
+}

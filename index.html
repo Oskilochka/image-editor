@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Editor</title>
+</head>
+<body>
+
+<!-- TODO: add readMe with screen of working project -->
+<!-- TODO: add stylelint -->
+
+<div class="container">
+    <h2>Image Editor</h2>
+    <div class="wrapper">
+        <div class="editor-panel">
+            <div class="filter">
+                <label class="title">Filters</label>
+                <div class="options">
+                    <button class="active-button">Brightness</button>
+                    <button>Saturation</button>
+                    <button>Inversion</button>
+                    <button>Grayscale</button>
+                </div>
+                <div class="slider">
+                    <div class="filter-info">
+                        <p class="name">Brightness</p>
+                        <p class="value">100%</p>
+                    </div>
+                    <input type="range" value="100" min="0" max="200" />
+                </div>
+            </div>
+            <div class="rotate">
+                <label class="title">Rotate & Flip</label>
+                <div class="options">
+                    <button><img src="icons/arrow_rotate_left_icon.svg" alt="Rotate left" /></button>
+                    <button><img src="icons/arrow_rotate_right_icon.svg" alt="Rotate right" /></button>
+                    <button><img src="icons/mirror_vertical_icon.svg" alt="Rotate vertical" /></button>
+                    <button><img src="icons/mirror_icon.svg" alt="Rotate horizontal" /></button>
+                </div>
+            </div>
+        </div>
+        <div class="preview-image">
+            <img src="preview_img.png" alt="preview image">
+        </div>
+    </div>
+    <div class="controls">
+        <button class="reset-filter">Reset filter</button>
+        <div class="row">
+            <button class="upload-img">Upload image</button>
+            <button class="save-img">Save image</button>
+        </div>
+    </div>
+</div>
+
+<!-- TODO: Add author of icon: https://www.iconfinder.com/appercuts  -->
+<script src="script.js"></script>
+</body>
+</html>
