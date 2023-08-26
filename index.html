@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="./img.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png"/>
     <link rel="stylesheet" href="style.css"/>
     <title>Image Editor</title>
 </head>
@@ -12,7 +12,7 @@
     <h2 class="headerTitle">Image Editor</h2>
     <div class="content disabled">
         <div class="imageContainer">
-            <img class="previewImg" src="preview_img.png" alt="preview image">
+            <img class="previewImg" src="assets/img/preview_img.png" alt="preview image">
         </div>
         <div class="editorPanel">
             <div class="filter">
@@ -28,16 +28,24 @@
                         <p class="title">Brightness</p>
                         <p class="value">100%</p>
                     </div>
-                    <input type="range" value="100" min="0" max="200">
+                    <input type="range" value="100" min="0" max="200"/>
                 </div>
             </div>
-            <div class="rotate">
+            <div class="transform">
                 <label class="title">Rotate & Flip</label>
                 <div class="options">
-                    <button id="left"><img src="icons/arrow_rotate_left_icon.svg" alt="Rotate left"/></button>
-                    <button id="right"><img src="icons/arrow_rotate_right_icon.svg" alt="Rotate right"/></button>
-                    <button id="vertical"><img src="icons/mirror_vertical_icon.svg" alt="Rotate vertical"/></button>
-                    <button id="horizontal"><img src="icons/mirror_icon.svg" alt="Rotate horizontal"/></button>
+                    <button id="left">
+                        <img src="assets/icons/arrow_rotate_left_icon.svg" alt="Rotate left"/>
+                    </button>
+                    <button id="right">
+                        <img src="assets/icons/arrow_rotate_right_icon.svg" alt="Rotate right"/>
+                    </button>
+                    <button id="vertical">
+                        <img src="assets/icons/mirror_vertical_icon.svg" alt="Rotate vertical"/>
+                    </button>
+                    <button id="horizontal">
+                        <img src="assets/icons/mirror_icon.svg" alt="Rotate horizontal"/>
+                    </button>
                 </div>
             </div>
         </div>
@@ -51,8 +59,6 @@
         </div>
     </div>
 </div>
-
-<!-- TODO: Add author of icon: https://www.iconfinder.com/appercuts  -->
 <script src="script.js"></script>
 </body>
 </html>
