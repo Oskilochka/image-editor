@@ -3,53 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img.png" />
+    <link rel="stylesheet" href="style.css"/>
     <title>Image Editor</title>
 </head>
 <body>
-
-<!-- TODO: add readMe with screen of working project -->
-<!-- TODO: add stylelint -->
-
 <div class="container">
-    <h2>Image Editor</h2>
-    <div class="wrapper">
-        <div class="editor-panel">
+    <h2 class="headerTitle">Image Editor</h2>
+    <div class="content disabled">
+        <div class="imageContainer">
+            <img class="previewImg" src="preview_img.png" alt="preview image">
+        </div>
+        <div class="editorPanel">
             <div class="filter">
                 <label class="title">Filters</label>
                 <div class="options">
-                    <button class="active-button">Brightness</button>
-                    <button>Saturation</button>
-                    <button>Inversion</button>
-                    <button>Grayscale</button>
+                    <button id="brightness" class="activeBtn">Brightness</button>
+                    <button id="saturation">Saturation</button>
+                    <button id="inversion">Inversion</button>
+                    <button id="grayscale">Grayscale</button>
                 </div>
                 <div class="slider">
-                    <div class="filter-info">
-                        <p class="name">Brightness</p>
+                    <div class="filterInfo">
+                        <p class="title">Brightness</p>
                         <p class="value">100%</p>
                     </div>
-                    <input type="range" value="100" min="0" max="200" />
+                    <input type="range" value="100" min="0" max="200">
                 </div>
             </div>
             <div class="rotate">
                 <label class="title">Rotate & Flip</label>
                 <div class="options">
-                    <button><img src="icons/arrow_rotate_left_icon.svg" alt="Rotate left" /></button>
-                    <button><img src="icons/arrow_rotate_right_icon.svg" alt="Rotate right" /></button>
-                    <button><img src="icons/mirror_vertical_icon.svg" alt="Rotate vertical" /></button>
-                    <button><img src="icons/mirror_icon.svg" alt="Rotate horizontal" /></button>
+                    <button id="left"><img src="icons/arrow_rotate_left_icon.svg" alt="Rotate left"/></button>
+                    <button id="right"><img src="icons/arrow_rotate_right_icon.svg" alt="Rotate right"/></button>
+                    <button id="vertical"><img src="icons/mirror_vertical_icon.svg" alt="Rotate vertical"/></button>
+                    <button id="horizontal"><img src="icons/mirror_icon.svg" alt="Rotate horizontal"/></button>
                 </div>
             </div>
         </div>
-        <div class="preview-image">
-            <img src="preview_img.png" alt="preview image">
-        </div>
     </div>
-    <div class="controls">
-        <button class="reset-filter">Reset filter</button>
-        <div class="row">
-            <button class="upload-img">Upload image</button>
-            <button class="save-img">Save image</button>
+    <div class="controlButtons">
+        <button class="uploadImg">Upload image</button>
+        <div class="separateButtons">
+            <input type="file" accept="image/*" hidden class="fileInput">
+            <button class="resetFilter disabled">Reset filter</button>
+            <button class="saveImg disabled">Save image</button>
         </div>
     </div>
 </div>

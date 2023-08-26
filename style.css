@@ -1,90 +1,213 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-color: #f9f8ff;
 }
 
 .container {
-    width: 800px;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     background: #fff;
     border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.container > h2{
+.container .headerTitle {
     font-size: 26px;
     font-weight: 500;
 }
 
-.wrapper {
+.content {
     display: flex;
     align-items: center;
-    margin: 20px 0;
     min-height: 340px;
+    margin: 20px 0;
 }
 
-.editor-panel {
-    border: 1px solid #d0d0d0;
-    padding: 15px;
+.container .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.editorPanel {
     width: 300px;
+    padding: 15px;
+    border: 1px solid #d0d0d0;
     border-radius: 5px;
 }
 
-.editor-panel .title {
+.editorPanel .title {
     display: block;
-    font-size: 18px;
     margin-bottom: 15px;
+    font-size: 18px;
 }
 
-.editor-panel .options {
+.editorPanel .options, .controlButtons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.editor-panel button {
+.editorPanel button {
     height: 36px;
-    font-size: 14px;
-    color: #001c52;
-    margin-bottom: 10px;
+    background: transparent;
     border: 1px solid #d0d0d0;
     border-radius: 5px;
-    background: transparent;
     cursor: pointer;
+    color: #001c52;
+    font-size: 14px;
+    transition: 0.4s;
 }
 
-.editor-panel button:hover {
-    background: #d0d0d0;
-    transition: 0.3s;
+.editorPanel button:hover {
+    background: #e1e1e1;
 }
 
 .filter button {
-    width: calc( 100% / 2 - 5px);
+    width: calc(100% / 2 - 5px);
+    margin-bottom: 10px;
 }
 
-.filter button.active-button {
-    color: #d0d0d0;
+.filter button.activeBtn {
     background: #33415e;
-    border-color:  #33415e;
+    border-color: #33415e;
+    color: #ffffff;
 }
 
 .rotate button {
-    width: calc( 100% / 4 - 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4 - 5px);
 }
 
-.preview-image > img {
-    width: 300px;
-    height: 200px;
+.slider {
+    margin: 18px 0;
+}
+
+.filter-info .name {
+    margin-bottom: 6px;
+}
+
+.imageContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.imageContainer > img {
+    width: 100%;
+    height: 100%;
+    max-width: 440px;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.slider input {
+    width: 100%;
+    height: 8px;
+    accent-color: #33415e;
+}
+
+.controlButtons button {
+    padding: 6px 14px;
+    margin-bottom: 10px;
+    background: transparent;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #001c52;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.controlButtons .resetFilter {
+    border-color: #b40000;
+    color: #b40000;
+}
+
+.controlButtons .resetFilter:hover {
+    background: #ffcaca;
+}
+
+.controlButtons .uploadImg {
+    background: #eef1ff;
+    border-color: #01349f;
+    color: #01349f;
+}
+
+.controlButtons .uploadImg:hover {
+    background: #d2d8ea;
+}
+
+.controlButtons .saveImg {
+    margin-left: 12px;
+    background: #effff2;
+    border-color: #006431;
+    color: #006431;
+}
+
+.controlButtons .saveImg:hover {
+    background: #c1e5c9;
+    color: #004824;
+}
+
+
+@media screen and (max-width: 700px ) {
+    .container {
+        padding: 14px;
+    }
+
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .imageContainer {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .container .headerTitle {
+        font-size: 22px;
+    }
+
+    .editorPanel {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px ) {
+    .controlButtons button {
+        width: 100%;
+    }
+
+    .controlButtons .separateButtons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .editorPanel .title {
+        font-size: 14px;
+    }
+
+    .slider {
+        margin: 10px 0;
+    }
 }
